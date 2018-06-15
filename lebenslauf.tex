@@ -1,0 +1,339 @@
+% Preamble {{{
+% Fixs the conflict of hyperref with moderncv class
+\PassOptionsToPackage{unicode}{hyperref}
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\usepackage{etoolbox}
+
+\usepackage[]{tikz} % tikzpicture environtment
+\usetikzlibrary{calc, positioning}
+
+% Moderncv themes
+% ----------------------------------------
+\moderncvstyle{banking} % 'casual', 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % 'blue', 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+% '\sfdefault' for the default sans serif font
+% '\rmdefault' for the default roman one, or any tex font name
+%\renewcommand{\familydefault}{\sfdefault}
+%\nopagenumbers{}
+
+\usepackage[T1]{fontenc} % Character encoding
+%\usepackage{lmodern}
+%\usepackage{charter}
+% \usepackage[bitstream-charter]{mathdesign} % Font
+\usepackage[ngerman]{babel} % Neu deutsche Rechtschreibung
+\usepackage[utf8]{inputenc} % UTF-8 encoding
+\usepackage{bookmark}
+
+% adjust the page margins
+%\usepackage[scale=0.75]{geometry}
+\usepackage[left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\setlength{\hintscolumnwidth}{3.5cm} % Width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm} % Width allocated to your name
+
+% personal data
+\firstname{Ngoc Minh}
+\familyname{Dao}
+\title{Lebenslauf}
+\address{Bömelburgstr. 18B}{30165 Hannover}{Deutschland}
+\phone[mobile]{+49 17674561589}
+\email{ngocminhdao88@gmail.com}
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+%\homepage{www.johndoe.com}
+\social[linkedin]{ngocminhdao}
+%\social[twitter]{jdoe}
+%\social[github]{jdoe}
+%\extrainfo{additional information}
+\extrainfo{\httplink[\faXingSquare~ngocminhdao]{xing.com/profile/NgocMinh_Dao}}
+%\photo[85pt][0.4pt]{./bilde/NgocMinhDao-Bewerbungsfoto.jpg}
+%\quote{Some quote}
+
+%\makeatletter % to show numerical labels in the bibliography
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}% }}}
+
+% custom footer on the other pages
+\fancyfoot[RE,LO]{\parbox[b]{15cm}{\color{color2}\addressfont\strut Ngoc Minh Dao~~\emailsymbol\emaillink{ngocminhdao88@gmail.com}~~\faMobile~{+49 17674561589} \\ ~~\httplink[\faLinkedin~ngocminhdao]{linkedin.com/in/ngocminhdao}~~\httplink[\faXingSquare~ngocminhdao]{xing.com/profile/NgocMinh_Dao}}}
+\rfoot{}
+
+% macros
+\newcommand {\myFirstName} {Ngoc Minh}
+\newcommand {\myLastName} {Dao}
+
+\begin{document}
+% ----------------------------------------
+% Lebenslauf
+% ----------------------------------------
+
+% create a new bookmark for Lebenslauf
+\bookmark[page=\thepage, level=-2]{Lebenslauf von Ngoc Minh Dao}
+\thispagestyle{empty}
+\hskip -3.5cm {\makecvtitle} % Lebenslauf Title
+\begin{picture}(0,0)
+    \put(380, 0){\includegraphics[scale=0.15]{./bilde/NgocMinhDao_Bewerbungsfoto.jpg}}
+\end{picture}
+
+% Berufserfahrung {{{
+\section{\textbf{Berufserfahrung}}
+
+% Hiwijob bei IMKT - Giovanno Moebes
+\cventry{10.2015--02.2017}
+{Wissenschaftliche Hilfskraft}
+{Institut für Maschinenkonstruktion und Tribologie}
+{Hannover, Deutschland}
+{}
+{
+Montage und Demontage von Prüfständen.
+Programmierung und Aufbau von Prüfstandsteuerungen zur Wälzlager-Untersuchungen.
+Analyse und Auswertung der Messreihen.
+}
+
+% Hiwijob bei Micreon GmbH - Frank Korte
+\cventry{09.2015--02.2017}
+{Werkstudent}
+{Micreon GmbH}
+{Hannover, Deutschland}
+{}
+{
+Programmierung einer Überwachungsoftware zum Aufnehmen des Arbeitsdrucks der Laser-Schneide-Maschinen.
+Aufbau von elektronischen Laborinstrumenten.
+Qualitätsinspektion der lasergeschnitten Teile.
+}
+
+% Hiwijob bei IFW - Maik Bergmeier
+\cventry{09.2015--03.2016}
+{Wissenschaftliche Hilfskraft}
+{Institut für Fertigungstechnik und Werkzeugmaschinen}
+{Garbsen, Deutschland}
+{}
+{
+Analyse, Auswertung und Präsentation von Messdaten eines Schraubenherstellung-Projekts.
+}
+%}}}
+
+% Praktika {{{
+\section{\textbf{Praktika}}
+% Praktikum bei Schaeffler Gruppe
+\cventry{03.2017--09.2017}
+{Praktikum im Bereich Anwendungstechnik}
+{Schaeffler Technologies AG \& Co. KG}
+{Herzogenaurach, Deutschland}
+{}
+{
+    \begin{itemize}
+        \item Berechnung von Fahrzeuggetrieben
+        \item Untersuchungen an Lagern aus Feldausfällen
+        \item Benchmarkuntersuchungen an Kugellagern verschiedener Wettbewerber
+        \item Empfang und Büromanagement sowie Unterstützung der Geschäftsleitung
+    \end{itemize}
+}
+%}}}
+
+% Ausbilung {{{
+\section{\textbf{Ausbildung}}
+
+% Master
+\cventry{10. 2009 -- 06.2018}
+{Master of Science, Maschinenbau}
+{Leibniz Universität Hannover}
+{Hannover, Deutschland}
+{Note: 2.7}
+{
+    Masterarbeit:
+    \begin{itemize}
+        \item ``Entwicklung eines modularen Messsystems zur optischen und Kapazitiven Schmierfilmdickenmessung in einem EHD-Kontakt''
+    \end{itemize}
+    %
+    Projektarbeit:
+    \begin{itemize}
+        \item "`Ausarbeitung eines Prüfkonzeptes zur Untersuchung der Dichtwirkung von Radialwellendichtringe unter Fliehkrafteinfluss"'
+    \end{itemize}
+}
+
+% Bachelor
+\cventry{09.2006--06.2009}
+{Bachelor of Science, Maschinenbau (Mechanik und Konstruktion)}
+{Hanoi University of Science and Technology}
+{Ha Noi, Viet Nam}
+{\textit{Gesamtnote - 7}}
+{
+    Bachelorarbeit:
+    \begin{itemize}
+        \item "`Konstruktion und Fertigung von Werkzeughaltern und deren speziellen Einsätze"'
+        %\item Betreuer: Dr.-Ing. Duy Liem Ta
+        %\item Note: 8.5/10
+    \end{itemize}
+}
+
+% Highschool life
+\cventry{09.2003--06.2006}
+{Abitur}
+{Minh Tan Oberschule}
+{Hai Duong, Viet Nam}
+{}
+{}
+%}}}
+
+% Weiterbildung, Kurse und Seminare {{{
+\section{\textbf{Weiterbildungen, Kurse und Seminare}}
+
+% Multisoft Virtual Academy - Creo
+\cventry{11.2016--12.2016}
+{PTC Creo Training}
+{Multisoft Virtual Academy}
+{Online}
+{}
+{
+    \begin{itemize}
+        \item Instruction-Led Training: 12 Sitzungen mit je 3 Stunden pro Sitzung
+    \end{itemize}
+}
+
+% LabVIEW - CLAD Prüfung
+\cventry{10.2016--10.2018}
+{Certified LabVIEW Associate Developer}
+{National Instrument}
+{Online}
+{}
+{
+}
+
+% Online course on edx mooc - Programming with C#
+\cventry{02.2016--04.2016}
+{Programming with C\# (DEV204x)}
+{Microsoft}
+{edX Inc}
+{}
+{
+    \begin{itemize}
+        \item Online Kurs: 8 Wochen mit je 8-10 Wochenstunden
+    \end{itemize}
+}
+
+% Online course on edx mooc - Embedded Systems - Shape the World
+\cventry{01.2016--04.2016}
+{Embedded Systems - Shape the World (UT.6.03x)}
+{UTAustinX}
+{edX Inc}
+{}
+{
+    \begin{itemize}
+        \item Online Kurs: 12 Wochen mit je 8 Wochenstunden
+    \end{itemize}
+}
+
+% Online course on edx mooc - Introduction to computer science and programming
+% using python
+\cventry{01.2016--03.2016}
+{Introduction to Computer Science and Programming using Python (6.00.1x)}
+{MITx}
+{edX Inc}
+{}
+{
+    \begin{itemize}
+        \item Online Kurs: 8 Wochen mit je 8-10 Wochenstunden
+    \end{itemize}
+}
+
+% Online course on edx mooc - Introduction to python for data science
+\cventry{01.2016--02.2016}
+{Introduction to Python for Data Science (DAT208x)}
+{Microsoft}
+{edX Inc}
+{}
+{
+    \begin{itemize}
+        \item Online Kurs: 4 Wochen mit je 4 Wochenstunden
+    \end{itemize}
+}
+
+% Fernlerngang beim Christiani Akademie - CAD-Kompakt
+\cventry{11.2015--04.2016}{CAD-Kompakt mit Solidworks}
+{Christiani Akademie}{Konstanz, Deutschland}{}{
+  \begin{itemize}
+    \item Fernlerngang: 6 Monaten mit je 5 Wochenstunden
+  \end{itemize}
+}
+%}}}
+
+% EDV-Kenntnisse {{{
+\section{\textbf{EDV-Kenntnisse}}
+
+% Programming
+\cvitem{Programmiersprache}{LabVIEW, \texttt{C/C++}, Matlab und Python}
+
+% Software
+\cvitem{Textverarbeitung}{\LaTeX~und MS Office}
+
+\cvitem{Bildverarbeitung}{CorelDRAW und GIMP}
+
+% CAD/CAE
+\cvitem{CAD/CAE}{Creo, Inventor, KISSSoft und ANSYS}
+
+% Operating systems
+\cvitem{OS}{Linux, Windows.}% }}}
+
+% Engagement und Hobbys {{{
+\section{\textbf{Engagement und Hobbys}}
+
+% Schaeffler Sportbetrieb
+\cventry{06.2017--heute}
+{
+Laufen mit den Arbeitskollegen von Schaeffler
+}
+{Schaeffler Lauftreff}
+{Herzogenaurach, Deutschland}
+{}
+{}
+
+% Arduino Hannover
+\cventry{10.2016--02.2017}
+{
+Treffen und Diskutieren über elektronische Projekte
+}
+{Arduino Hannover}
+{Hannover, Deutschland}
+{}
+{}
+
+% AKAKRAFT Mitglied
+\cventry{03.2015--05.2015}
+{
+KFZ Inspektion, Ölwechsel, Zerlegung und Montage von Motoren und Getrieben.
+}
+{Akademische Gruppe für Kraftfahrwesen (AKAKRAFT)}
+{Hannover, Deutschland}
+{}
+{}
+
+% Badminton sport
+\cventry{seit 2013}
+{
+ Spieler für die Badminton Mannschaft in der 1.Kreisklasse Niedersachsen.
+}
+{SV Harkenbleck Badminton}
+{Hemmingen, Hannover}
+{}
+{}
+%}}}
+
+% Spachen {{{
+\section{\textbf{Sprachen}}
+\cvitemwithcomment{Englisch}{Gute Kenntnisse}{Niveau B1}
+\cvitemwithcomment{Deutsch}{Gute Kenntnisse}{Niveau C1}
+\cvitemwithcomment{Vietnamesisch}{Fließend}{Muttersprache}% }}}
+
+% Qualifikation {{{
+\section{\textbf{Qualifikation}}
+\cvitem{Führerschein}{PKW Klasse B}
+\cvitem{National Instrument}{LabVIEW Certified Associate Developer}
+%}}}
+
+\end{document}
