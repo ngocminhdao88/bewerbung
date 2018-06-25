@@ -11,3 +11,4 @@ all:
 # clean all the file
 clean:
 	$(LATEXMK) -C
+	rm ./output/*
