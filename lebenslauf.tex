@@ -33,16 +33,17 @@
 \firstname{Ngoc Minh}
 \familyname{Dao}
 \title{Lebenslauf}
-\address{Bömelburgstr. 18B}{30165 Hannover}{Deutschland}
-\phone[mobile]{+49 17674561589}
-\email{ngocminhdao88@gmail.com}
+%\address{Bömelburgstr. 18B}{30165 Hannover}{Deutschland}
+%\phone[mobile]{+49 17674561589}
+%\email{ngocminhdao88@gmail.com}
 %\phone[fixed]{+2~(345)~678~901}
 %\phone[fax]{+3~(456)~789~012}
 %\homepage{www.johndoe.com}
 %\social[linkedin]{ngocminhdao}
-\social[xing]{NgocMinh\_Dao}
+%\social[xing]{NgocMinh\_Dao}
 %\social[github]{jdoe}
-\extrainfo{Geboren am 24.03.1988 in Hai Duong, Vietnam \makeheaddetailssymbol Verfügbarkeit: sofort}
+%\extrainfo{Geboren am 24.03.1988 in Hai Duong, Vietnam \makeheaddetailssymbol Verfügbarkeit: sofort}
+%\extrainfo{Geboren am 24.03.1988 in Hai Duong, Vietnam}
 %\photo[85pt][0.4pt]{./bilde/NgocMinhDao-Bewerbungsfoto.jpg}
 %\quote{Some quote}
 
@@ -56,7 +57,8 @@
 %\newcites{book,misc}{{Books},{Others}}% }}}
 
 % custom footer on the other pages
-\fancyfoot[RE,LO]{\parbox[b]{21cm}{\color{color2}\addressfont\strut Ngoc Minh Dao~~\emailsymbol\emaillink{ngocminhdao88@gmail.com}~~\faMobile~{+49 17674561589}~~\httplink[\faXingSquare~ngocminhdao]{xing.com/profile/NgocMinh_Dao}}}
+%\fancyfoot[RE,LO]{\parbox[b]{21cm}{\color{color2}\addressfont\strut Ngoc Minh Dao~~\emailsymbol\emaillink{ngocminhdao88@gmail.com}~~\faMobile~{+49 17674561589}~~}}
+\rfoot{Page \thepage}
 
 % macros
 \newcommand {\myFirstName} {Ngoc Minh}
@@ -69,13 +71,52 @@
 
 % create a new bookmark for Lebenslauf
 \bookmark[page=\thepage, level=-2]{Lebenslauf von Ngoc Minh Dao}
-\thispagestyle{empty}
-\hskip -3.5cm {\makecvtitle} % Lebenslauf Title
+%\hskip -3.5cm {\makecvtitle} % Lebenslauf Title
+\makecvtitle % Lebenslauf Title
+
+
+% Persönliche Daten {{{
+\section{\textbf{Persönliche Daten}}
+\cvitemwithcomment{Name}{Ngoc Minh Dao}{}
+\cvitemwithcomment{Adresse}{Bömelburgstraße 18B, 30165 Hannover}{}
+\cvitemwithcomment{Mobil}{017674561589}{}
+\cvitemwithcomment{E-Mail}{\href{mailto:ngocminhdao88@gmail.com}{ngocminhdao88@gmail.com}}{}
+\cvitemwithcomment{Geburtsdatum/-ort}{24.03.1988 in Hai Duong, Vietnam}{}
+\cvitemwithcomment{Staatsangehörigkeit}{vietnamesisch}{}
 
 % Bewerbungsfoto
-\begin{picture}(0,0)
-    \put(380, 0){\includegraphics[scale=0.15]{./bilde/NgocMinhDao_Bewerbungsfoto.jpg}}
-\end{picture}
+%\begin{picture}(0,0)
+%    \put(345, 15){\includegraphics[scale=0.2]{./bilde/bewerbungsfoto_small.jpg}}
+%\end{picture}
+% }}}
+
+% Ausbilung {{{
+\section{\textbf{Ausbildung}}
+
+% Master
+\cventry{10.2009--06.2018}
+{Master of Science, Maschinenbau (Konstruktion, Fahrzeugsysteme)}
+{Leibniz Universität Hannover}
+{Hannover, Deutschland}
+{}
+{
+    \begin{itemize}
+        \item Masterarbeit: ``Entwicklung eines modularen Messsystems zur optischen und kapazitiven Schmierfilmdicken\-messung in einem EHD-Kontakt''
+        \item Projektarbeit: ``Ausarbeitung eines Prüfkonzeptes zur Untersuchung der Dichtwirkung von Radialwellendichtringe unter Fliehkrafteinfluss"'
+    \end{itemize}
+}
+
+% Bachelor
+\cventry{09.2006--06.2009}
+{Bachelor of Science, Maschinenbau (Konstruktion)}
+{Hanoi University of Science and Technology}
+{Hanoi, Vietnam}
+{}
+{
+    \labelitemi\ Bachelorarbeit: ``Konstruktion und Fertigung von Werkzeughaltern und deren speziellen Einsätze''
+}
+%}}}
+
 
 % Praktika {{{
 \section{\textbf{Praktika}}
@@ -140,38 +181,11 @@
 %}}}
 
 
-% Ausbilung {{{
-\section{\textbf{Ausbildung}}
-
-% Master
-\cventry{10.2009--06.2018}
-{Master of Science, Maschinenbau (Konstruktion, Fahrzeugsysteme)}
-{Leibniz Universität Hannover}
-{Hannover, Deutschland}
-{}
-{
-    \begin{itemize}
-        \item Masterarbeit: ``Entwicklung eines modularen Messsystems zur optischen und kapazitiven Schmierfilmdicken\-messung in einem EHD-Kontakt''
-        \item Projektarbeit: ``Ausarbeitung eines Prüfkonzeptes zur Untersuchung der Dichtwirkung von Radialwellendichtringe unter Fliehkrafteinfluss"'
-    \end{itemize}
-}
-
-% Bachelor
-\cventry{09.2006--06.2009}
-{Bachelor of Science, Maschinenbau (Konstruktion)}
-{Hanoi University of Science and Technology}
-{Hanoi, Vietnam}
-{}
-{
-    \labelitemi\ Bachelorarbeit: ``Konstruktion und Fertigung von Werkzeughaltern und deren speziellen Einsätze''
-}
-
-
 % Weiterbildung, Kurse und Seminare {{{
 \section{\textbf{Weiterbildungen, Kurse und Seminare}}
 
 % A Hands-on Introduction to Engineering Simulations - CornellX
-\cventry{05.2018--vsl. 08.2018}
+\cventry{05.2018--vsl. 09.2018}
 {\labelitemi\ Finite-Elemente-Analyse und numerische Strömungsmechanik mit ANSYS}
 {A Hands-on Introduction to Engineering Simulations}
 {CornellX}
@@ -180,7 +194,7 @@
 
 
 % Introduction to Project Management - AdelaideX
-\cventry{06.2018--vsl. 08.2018}
+\cventry{06.2018--vsl. 09.2018}
 {\labelitemi\ Initialisierung, Planung, Ausführung von Projekten}
 {Introduction to Project Management}
 {AdelaideX}
